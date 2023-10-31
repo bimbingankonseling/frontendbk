@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .chatbox {
+            width: 300px;
+            margin: 20px auto;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .chatbox .message {
+            background-color: #f2f2f2;
+            padding: 10px;
+            margin: 5px;
+            border-radius: 5px;
+        }
+
+        .user-message {
+            background-color: #007bff;
+            color: #fff;
+            text-align: right;
+        }
+
+        .bot-message {
+            background-color: #4caf50;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="chatbox">
+        <div class="message bot-message">Selamat datang di KeeKonseling! Ada yang bisa saya bantu?</div>
+    </div>
+
+    <div class="chatbox">
+        <input type="text" id="user-input" placeholder="Tulis pesan Anda..." onkeypress="handleKeyPress(event)">
+    </div>
+
+    <script>
+        function handleKeyPress(event) {
+            if (event.key === "Enter") {
+                sendMessage();
+            }
+        }
+
+        function sendMessage() {
+            const userMessage = document.getElementById("user-input").value;
+            if (userMessage === "") {
+                return;
+            }
+
+            const chatbox = document.querySelector(".chatbox");
+            const userDiv = document.createElement("div");
+            userDiv.classList.add("message", "user-message");
+            userDiv.textContent = userMessage;
+            chatbox.appendChild(userDiv);
+
+            // Simulasikan respon bot di sini (Anda dapat menggantinya dengan logika chatbot sebenarnya)
+            const botResponse = "Terima kasih atas pesan Anda! Saya adalah chatbot sederhana.";
+            const botDiv = document.createElement("div");
+            botDiv.classList.add("message", "bot-message");
+            botDiv.textContent = botResponse;
+            chatbox.appendChild(botDiv);
+
+            // Hapus input pengguna
+            document.getElementById("user-input").value = "";
+        }
+    </script>
+</body>
+</html>
