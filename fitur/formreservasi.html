@@ -23,8 +23,8 @@
         input[type="text"],
         input[type="tel"],
         input[type="date"] {
-            width: 100%;
-            padding: 10px;
+            width: 95%;
+            padding: 5px;
             border: 2px solid #ccc;
             border-radius: 10px;
         }
@@ -35,35 +35,26 @@
     <form>
         <div class="form-group">
             <label for="nama">Nama</label>
-            <input type="text" id="nama" class="form-control">
-        </div>
-     
-        <div class="form-group">
+            <input type="text" id="ttlr" class="form-control" >
+       <br><br>
             <label for="notelp">Nomor Telepon</label>
-            <input type="number" id="notelp" class="form-control" >
-        </div>
-     
-        <div class="form-group">
+            <input type="text" id="ttlr" class="form-control" >
+      <br><br>
             <label for="ttlr">Tempat, Tanggal lahir</label>
             <input type="text" id="ttlr" class="form-control" >
-        </div>
-
-        <div class="form-group">
+        <br><br>
             <label for="status">Status</label>
             <select id="status" class="form-control">
                 <option value="">- Pilih Status</option>
-                <option value="">Belum Menikah</option>
-                <option value="">Sudah Menikah</option>
-                <option value="">Janda</option>
+                <option value="">Mahasiswa/Pelajar</option>
+                <option value="">Pekerja</option>
             </select>
-        </div>
-     
-        <div class="form-group">
+        <br><br>
             <label for="keluhan">Tuliskan Keluhan Anda</label>
             <textarea class="form-control" id="keluhan" rows="4" ></textarea>
+        <br><br>
+            <button type="submit">Daftar</button>
         </div>
-     
-        <button type="button" class="btn btn-primary">Submit</button>
     </form>
 </body>
 </html>
