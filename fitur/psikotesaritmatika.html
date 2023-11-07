@@ -17,7 +17,7 @@
   <!-- fonts -->
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
   <!-- Main Stylesheet -->
-  <link href="../assets/style.css" rel="stylesheet" media="screen" />
+  <link href="../css/aritmatika.css" rel="stylesheet" media="screen" />
 </head>
 
 <body>
@@ -54,45 +54,28 @@
   </header>
   <!-- /header -->
 
-  <!-- details page -->
-  <section class="single section-sm pb-0">
-    <div class="container">
-      <div class="row">
-        
-        <div class="col-lg-12">
-          <div class="p-lg-5 p-4 bg-white">
-            <h2 class="mb-5">TES PSIKOTES ARITMATIKA</h2>
-            <h6>Selamat Datang Di Tes Psikotes Aritmatika</h6>
-            
-
-            <br><br>
-            <div class="">
-                <a href="../fitur/formreservasi.html" class="px-4 py-5 bg-white shadow text-center d-block match-height">
-                    
-                    <h3 class="mb-3 mt-0">Tes Psikotes Verbal</h3>
-                    <p class="mb-0">Meliputi sinonim atau antonym, analog, dan korelasi makna</p>
-                </a>
-            </div>
-            
-            
+      <div class="container">
+          <h1>Tes Aritmatika</h1>
+          <form id="quiz-form">
+              <div class="question">
+                  <p>1. 2 + 2 = ?</p>
+                  <input type="number" name="q1" required>
+              </div>
+              <div class="question">
+                  <p>2. 5 - 3 = ?</p>
+                  <input type="number" name="q2" required>
+              </div>
+              <div class="question">
+                  <p>3. 4 * 6 = ?</p>
+                  <input type="number" name="q3" required>
+              </div>
+              <input type="submit" value="Submit">
+          </form>
+          <div id="result"></div>
       </div>
-      
-    </div>
-  </section>
-  <br><br>
-  <!-- /details page -->
-
   
-
-  <!-- ** JS Plugins Needed for the Project ** -->
-  <!-- jquiry -->
-  <script src="../plugins/jquery/jquery-1.12.4.js"></script>
-  <!-- Bootstrap JS -->
-  <script src="../plugins/bootstrap/bootstrap.min.js"></script>
-  <!-- match-height JS -->
-  <script src="../plugins/match-height/jquery.matchHeight-min.js"></script>
-  <!-- Main Script -->
-  <script src="../assets/script.js"></script>
+      <script src="../js/aritmatika.js"></script>
+  
 </body>
 
 </html>
