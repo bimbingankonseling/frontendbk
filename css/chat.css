@@ -21,7 +21,7 @@
   }
   body .card #header {
     height: 5vw;
-    background: #000;
+    background: rgb(126, 126, 230);
     padding: 0vw;
   }
   body .card #header h1 {
