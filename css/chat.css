@@ -91,7 +91,7 @@
     width: 100%;
   }
   body .card #input-section input {
-    color: #000;
+    color: rgb(126, 126, 230)sss;
     min-width: 0.5vw;
     outline: none;
     height: 5vw;
