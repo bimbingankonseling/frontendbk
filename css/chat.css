@@ -60,7 +60,7 @@
     margin: 1.5vw 0;
   }
   body .card #message-section #user {
-    border: 1.5px solid #000;
+    border: 1.5px solid rgb(126, 126, 230);
     border-radius: 1.5vw 0vw 1.5vw 1.8vw;
     background-color: #000;
     float: right;
