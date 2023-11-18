@@ -14,7 +14,13 @@
     -webkit-font-smoothing: antialiased;
     font-size: 17px;
     color: var(--text-color);
-    background-color: var(--body-color)
+    background-color: var(--body-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif
   }
   
   p {
@@ -876,15 +882,6 @@
   
   .code-tabs .nav-tabs .nav-item.active .nav-link {
     color: var(--white-color)
-  }
-
-  body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    font-family: Arial, sans-serif;
   }
   
   .canvas-container {
