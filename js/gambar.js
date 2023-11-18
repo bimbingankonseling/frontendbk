@@ -1,35 +1,29 @@
-// Mengambil elemen-elemen yang diperlukan
-const drawingArea = document.getElementById('drawingArea');
-const clearButton = document.getElementById('clearButton');
-const context = drawingArea.getContext('2d');
+const canvas = document.getElementById('drawingCanvas');
+const ctx = canvas.getContext('2d');
 let isDrawing = false;
 
-// Mengatur warna dan lebar garis
-context.strokeStyle = 'black';
-context.lineWidth = 2;
+canvas.addEventListener('mousedown', startDrawing);
+canvas.addEventListener('mousemove', draw);
+canvas.addEventListener('mouseup', endDrawing);
+canvas.addEventListener('mouseout', endDrawing);
 
-// Mengatur event listener ketika tombol mouse ditekan
-drawingArea.addEventListener('mousedown', () => {
-    isDrawing = true;
-    context.beginPath();
-    context.moveTo(event.clientX - drawingArea.getBoundingClientRect().left, event.clientY - drawingArea.getBoundingClientRect().top);
-});
+function startDrawing(e) {
+  isDrawing = true;
+  draw(e);
+}
 
-// Mengatur event listener ketika mouse bergerak
-drawingArea.addEventListener('mousemove', () => {
-    if (isDrawing) {
-        context.lineTo(event.clientX - drawingArea.getBoundingClientRect().left, event.clientY - drawingArea.getBoundingClientRect().top);
-        context.stroke();
-    }
-});
+function draw(e) {
+  if (!isDrawing) return;
+  ctx.lineWidth = 4;
+  ctx.lineCap = 'round';
+  ctx.strokeStyle = '#000';
+  ctx.lineTo(e.offsetX, e.offsetY);
+  ctx.stroke();
+  ctx.beginPath();
+  ctx.moveTo(e.offsetX, e.offsetY);
+}
 
-// Mengatur event listener ketika tombol mouse dilepas
-drawingArea.addEventListener('mouseup', () => {
-    isDrawing = false;
-    context.closePath();
-});
-
-// Event listener untuk tombol 'Hapus'
-clearButton.addEventListener('click', () => {
-    context.clearRect(0, 0, drawingArea.width, drawingArea.height);
-});
+function endDrawing() {
+  isDrawing = false;
+  ctx.beginPath();
+}
