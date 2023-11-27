@@ -69,7 +69,7 @@
     color: #fff;
   }
   body .card #message-section .message {
-    color: #000;
+    color: darkslategrey;
     clear: both;
     line-height: 1.2vw;
     font-size: 1.2vw;
