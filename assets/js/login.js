@@ -42,7 +42,7 @@ function responseData(result) {
             text: "Selamat Datang di Billblis",
         }).then(() => {
             // Redirect to the dashboard page
-            window.location.href = " ../dashboard.html";
+            window.location.href = "../plugins/index.html";
         });
     } else {
         // Use SweetAlert for error message
